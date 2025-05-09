@@ -1,0 +1,608 @@
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    padding: 30px;
+    margin-top: 150px;
+    margin-left: 750px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    width: 93%;
+    padding: 12px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top : 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.submit{
+    width: 99%;
+    padding: 12px;
+    margin-top : 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.submit:hover {
+    background-color: #0056b3;
+}
+
+.btn-generate {
+    padding: 8px 15px;  /* Réduire la taille du padding */
+    font-size: 14px;    /* Réduire la taille de la police */
+    width: auto;        /* Laisser la largeur s'ajuster à la taille du contenu */
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-generate:hover {
+    background-color: #0056b3;
+}
+
+
+p {
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+.dashboard-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* Global Body and Layout */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;  /* Distribue les éléments sur toute la largeur */
+    align-items: center;            /* Centre les éléments verticalement */
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-bottom: 2px solid #ccc;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espace entre les éléments */
+}
+
+.btn-download {
+    padding: 8px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.btn-download:hover {
+    background-color: #0056b3;
+}
+
+.btn-logout {
+    padding: 8px 15px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.btn-logout:hover {
+    background-color: #c82333;
+}
+
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #343a40;
+    color: white;
+    padding-top: 30px;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Permet de coller les éléments en bas */
+}
+
+.sidebar-header {
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #555;
+    padding-bottom: 10px;
+}
+
+.sidebar-header-2 {
+    text-align: center;
+    border-bottom: 2px solid #555;
+    padding-bottom: 10px;
+    position: relative;
+    margin-top: 20px; /* Espacement entre le contenu principal et le bas */
+}
+
+.sidebar-header h2 {
+    color: white;
+    font-size: 22px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+/* Sidebar Menu */
+.sidebar-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1; /* Permet de pousser les éléments du bas vers le bas */
+}
+
+.sidebar-menu li {
+    padding: 15px;
+    text-align: center;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.sidebar-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+}
+
+.sidebar-menu li:hover {
+    background-color: #007BFF;
+}
+
+.nav-bottom li:hover {
+    background-color: transparent;
+}
+
+
+.sidebar-menu li a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Footer Menu (Legal Links) */
+.nav-bottom {
+    position: relative;
+    margin-top: 20px; /* Espacement entre le contenu principal et le bas */
+    width: 100%;
+    font-size: 14px;
+}
+
+.nav-bottom li {
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.nav-bottom li a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+.nav-bottom li a:hover {
+    text-decoration: underline;
+    background-color: transparent !important;
+}
+
+.nav-bottom {
+    padding-bottom: 20px;
+}
+
+/* Main Content Styles */
+.main-content {
+    margin-left: 250px;
+    padding: 30px;
+    flex-grow: 1;
+    background-color: #fff;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+/* Key Display */
+.key-display {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.key-display input {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.key-display button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 20%;
+    border-radius: 5px;
+}
+
+.key-display button:hover {
+    background-color: #0056b3;
+}
+
+/* Key Copy Button */
+.btn-copy {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btn-copy:hover {
+    background-color: #0056b3;
+}
+
+.btn-generate:hover,
+.btn-delete:hover,
+.btn-logout:hover,
+button.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.sidebar-menu li a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer .btn-logout {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+footer .btn-logout:hover {
+    text-decoration: underline;
+}
+
+/* Formulaire de génération de clé */
+.key-list ul {
+    padding: 0;
+}
+
+.key-list li.key-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.key-list .key-code {
+    flex-grow: 1;
+}
+
+.key-list button.btn-delete {
+    background-color: transparent;
+    border: none;
+    color: #dc3545;
+    font-size: 18px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.key-list button.btn-delete:hover {
+    color: #c82333;
+}
+
+.key-list button.btn-delete i {
+    font-size: 20px;
+}
+
+/* Nouveau style pour les liens du bas dans la sidebar */
+.nav-bottom {
+    position: absolute;
+    margin-top: 500px;
+    width: 100%;
+    font-size: 14px;
+}
+
+.nav-bottom li ul{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+.nav-bottom li {
+    padding: 10px;
+    text-align: center;
+}
+
+.nav-bottom li a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+.nav-bottom li a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+
+button.btn-primary {
+    width: 100%;
+    padding: 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: background-color 0.1s;
+}
+
+
+footer {
+    margin-top: 30px;
+    text-align: center;
+}
+
+footer .btn-logout {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+footer .btn-logout:hover {
+    text-decoration: underline;
+}
+
+.premium-offers {
+    text-align: center;
+    padding: 60px;
+}
+
+.offer-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+.offer-card {
+    background-color: #fff;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.offer-card h3 {
+    font-size: 20px;
+    color: #333;
+}
+
+.offer-card p {
+    font-size: 16px;
+    color: #555;
+}
+
+.offer-card button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.offer-card button:hover {
+    background-color: #0056b3;
+}
+
+/* Modal */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+/* Style du modal */
+.modal {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.modal p {
+    font-size: 16px;
+    margin: 30px 0;
+    color: #555;
+}
+
+.modal button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+.modal button:hover {
+    background-color: #0056b3;
+}
+
+.btn-cancel {
+    background-color: #ccc;
+    color: #333;
+}
+
+.btn-cancel:hover {
+    background-color: #999;
+}
+
+/* Key Display */
+.key-display {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.key-display input {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.key-display button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 20%;
+    border-radius: 5px;
+}
+
+.key-display button:hover {
+    background-color: #0056b3;
+}
+
+/* Key Copy Button */
+.btn-copy {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btn-copy:hover {
+    background-color: #0056b3;
+}
+
